@@ -1,0 +1,1 @@
+go install mvdan.cc/gofumpt@latest && go version && go install github.com/a-h/templ/cmd/templ@latest && go install github.com/cosmtrek/air@latest

@@ -1,0 +1,34 @@
+version: '0.1'
+
+services:
+  webservice:
+    # Using a Dockerfile is optional, but included for completeness.
+    build: 
+      context: .
+      dockerfile: WebService.Dockerfile
+
+    volumes:
+      - ..:/workspace:cached
+    #   # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
+    #   # - /var/run/docker.sock:/var/run/docker.sock 
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"  
+
+    # Runs app on the same network as the service container, allows "forwardPorts" in devcontainer.json function.
+    network_mode: service:db
+    
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]  # Corrected syntax and indentation
+      interval: 1s
+      timeout: 5s
+      retries: 10  # Corrected indentation
