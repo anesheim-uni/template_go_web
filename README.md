@@ -32,4 +32,4 @@ Default port for the web server is `1324`.
 - ❌ add `sass --watch ...` to air configuration (.toml)
 - ⬜ provide toy db for hello world service
 - ⬜ fly.io batteries for deployment
-- ⬜
+- ⬜ consider revising `Dockerfile` and `postCreateCommand.sh` as docker is better at caching
