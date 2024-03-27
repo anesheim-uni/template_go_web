@@ -15,7 +15,7 @@ For vscode users, install the [vscode-devcontainer extension](https://marketplac
 Others, simply build the container using `docker compose up -d` (-d: detached), see [docker compose up](https://docs.docker.com/reference/cli/docker/compose/up/) for more.
 
 Once the container is built and running, simply run `air` and `sass --watch static/stylesheets:static/stylesheets` in seperate terminals.
-Default port for the web server is `1324`.
+Default port for the web server is `1323`.
 
 # Roadmap
 

@@ -15,14 +15,14 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	// Static files
+	// Static files 
 	e.Static("/static", "static")
 
 	// Routes
 	e.GET("/", hello)
 
 	// Start server
-	e.Logger.Fatal(e.Start(":1324"))
+	e.Logger.Fatal(e.Start(":1323"))
 }
 
 // Handler
