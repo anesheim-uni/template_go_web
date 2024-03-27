@@ -14,6 +14,9 @@ The second service is the `db`, which is a simple toy [postgresSQL](https://www.
 For vscode users, install the [vscode-devcontainer extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and simply build the container.
 Others, simply build the container using `docker compose up -d` (-d: detached), see [docker compose up](https://docs.docker.com/reference/cli/docker/compose/up/) for more.
 
+Once the container is built and running, simply run `air` and `sass --watch static/stylesheets:static/stylesheets` in seperate terminals.
+Default port for the web server is `1324`.
+
 # Roadmap
 
 - ✅ docker-compose.yml for devcontainer and db seperation
@@ -23,9 +26,10 @@ Others, simply build the container using `docker compose up -d` (-d: detached), 
 - ✅ SASS for stylesheets
 - ✅ templ
 - ✅ htmx
+- ⬜ fix `sass watch ... `
 - ⬜ write basic templ-rendering function
 - ⬜ refine hello world web-service to use templ, htmx and SASS
-- ⬜ add `sass --watch ...` to air configuration (.toml)
+- ❌ add `sass --watch ...` to air configuration (.toml)
 - ⬜ provide toy db for hello world service
 - ⬜ fly.io batteries for deployment
 - ⬜
