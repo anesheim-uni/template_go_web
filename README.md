@@ -26,6 +26,7 @@ Default port for the web server is `1324`.
 - ✅ SASS for stylesheets
 - ✅ templ
 - ✅ htmx
+- ⬜ setup pre-commit and linters etc
 - ⬜ fix `sass watch ... `
 - ⬜ write basic templ-rendering function
 - ⬜ refine hello world web-service to use templ, htmx and SASS
