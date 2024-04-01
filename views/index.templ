@@ -1,0 +1,14 @@
+package views
+
+import "github.com/anesheim-uni/template_go/models"
+
+templ Index(name string) {
+	<div>Hello, { name }</div>
+}
+
+templ Greeting(person models.Person) {
+	@Layout("Golang HTMX templ")
+	<div class="greeting">
+		@Index(person.Name)
+	</div>
+}
